@@ -97,7 +97,7 @@ def create_parser():
 
 def main():
     logging.basicConfig(
-        format='%(asctime)s.%(msecs)03d %(name)-12s %(levelname)-8s %(message)s', datefmt='%Y-%m-%d &%H:%M:%S'
+        format='%(asctime)s.%(msecs)03d %(name)-12s %(levelname)-8s %(message)s', datefmt='%m-%d-%Y &%H:%M:%S'
     )
     logger.setLevel(logging.DEBUG)
     app_start_time = dt.now()
@@ -113,9 +113,9 @@ def main():
     args = parser.parse_args()
 
     # Connect these two signals from the OS
-    # signal_handler will get called if OS sends either of these
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
+    # signal_handler will get called if OS sends either of these
 
     while not exit_flag:
         try:
