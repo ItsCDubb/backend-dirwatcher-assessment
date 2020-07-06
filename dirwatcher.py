@@ -52,7 +52,7 @@ def find_magic(filename, starting_line, magic_word):
     """
     # Iterate through dictionary and open up each file at the last line that you read from to see if there's anymore "magic" text
     # Update the last position you read from int he dictionary
-    # Key will be the filenames and the values will be the starting line you used and the last position you read from 
+    # Key will be the filenames and the values will be the starting line you used and the last position you read from
     """
     line_number = 0
     with open(filename) as f:
@@ -75,7 +75,7 @@ def signal_handler(sig_num, frame):
     """
     # Logs associated signal name (New way)
     logger.warn('Received ' + signal.Signals(sig_num).name)
-    
+
     # Logs associated signal name (the python2 way)
     signames = dict((k, v) for v, k in reversed(sorted(signal.__dict__.items()))
                     if v.startswith('SIG') and not v.startswith('SIG_'))
