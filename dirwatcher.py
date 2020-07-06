@@ -50,10 +50,9 @@ def watch_dir(args):
 
 def find_magic(filename, starting_line, magic_word):
     """
-    # Iterate through dictionary and open up each file at the last line that you read from to see if there's anymore "magic" text
-    # Update the last position you read from int he dictionary
-    # Key will be the filenames and the values will be the starting line you used and the last position you read from
-    """
+    Iterate through dictionary and open up each file at the last line that you read from to see if there's anymore "magic" text
+    Update the last position you read from int the dictionary key will be the filenames and the values will be the starting
+    line you used and the last position you read from"""
     line_number = 0
     with open(filename) as f:
         for line_number, line in enumerate(f):
